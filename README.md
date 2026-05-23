@@ -31,7 +31,7 @@ Les outils IA généralistes ne connaissent pas le plan comptable SYSCOHADA, les
 ### Manuel (Claude Code, Cursor, Windsurf)
 
 ```bash
-git clone https://github.com/wach/wach-ohada.git
+git clone https://github.com/wach235/wach-ohada.git
 cp wach-ohada/comptable/company.example.json ./company.json
 # Éditez company.json avec les informations de votre entreprise
 ```

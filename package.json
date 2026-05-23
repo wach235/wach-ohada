@@ -5,10 +5,10 @@
   "keywords": ["ohada", "syscohada", "comptabilité", "fiscalité", "tchad", "cemac", "ai-skill"],
   "author": "wach",
   "license": "MIT",
-  "homepage": "https://github.com/wach/wach-ohada",
+  "homepage": "https://github.com/wach235/wach-ohada",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wach/wach-ohada.git"
+    "url": "https://github.com/wach235/wach-ohada.git"
   },
   "scripts": {
     "validate": "for f in comptable/profiles/chad.json data/syscohada/plan-comptable.json comptable/company.example.json marketplace.json; do python3 -m json.tool $f > /dev/null && echo OK: $f || echo FAIL: $f; done",
