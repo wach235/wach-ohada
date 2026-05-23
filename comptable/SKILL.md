@@ -133,7 +133,7 @@ Consulte `data/syscohada/plan-comptable.json` pour la liste complète. Comptes l
 | Compte | Usage |
 |---|---|
 | 701 | Ventes de marchandises |
-| 706 | Services facturés |
+| 706 | Services vendus |
 | 771 | Produits financiers |
 
 ---
