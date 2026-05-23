@@ -1,0 +1,13 @@
+{
+  "name": "wach-ohada",
+  "version": "1.0.0",
+  "description": "Skills IA pour la comptabilité SYSCOHADA et la fiscalité OHADA — Tchad et zone CEMAC",
+  "keywords": ["ohada", "syscohada", "comptabilité", "fiscalité", "tchad", "cemac", "ai-skill"],
+  "author": "wach",
+  "license": "MIT",
+  "homepage": "https://github.com/wach/wach-ohada",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wach/wach-ohada.git"
+  }
+}
