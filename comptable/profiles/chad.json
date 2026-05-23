@@ -1,0 +1,51 @@
+{
+  "pays": "Tchad",
+  "iso": "TD",
+  "autorite_fiscale": "DGI",
+  "monnaie": "XAF",
+  "zone": "CEMAC",
+  "referentiel_comptable": "SYSCOHADA-2017",
+  "taux": {
+    "is": 0.35,
+    "tva_standard": 0.18,
+    "tva_reduit": 0.09,
+    "tva_export": 0.00,
+    "irpp": 0.30,
+    "plus_values": 0.20,
+    "patente": 0.0035,
+    "cnps_employeur_retraite": 0.165,
+    "cnps_salarie": 0.035,
+    "taxe_salaires_employeur": 0.075,
+    "foncier_bati_ndjamena": 0.10,
+    "foncier_bati_autres": 0.08,
+    "foncier_non_bati_ndjamena": 0.21,
+    "foncier_non_bati_autres": 0.20,
+    "retenue_dividendes_residents": 0.20,
+    "retenue_dividendes_cemac": 0.05,
+    "retenue_dividendes_hors_cemac": 0.20,
+    "retenue_interets_cemac": 0.05,
+    "retenue_interets_hors_cemac": 0.25,
+    "retenue_redevances_cemac": 0.075,
+    "retenue_redevances_hors_cemac": 0.25
+  },
+  "echeances": {
+    "tva": { "frequence": "mensuelle", "jour": 15, "description": "15 du mois suivant la période" },
+    "irpp_salaires": { "frequence": "mensuelle", "jour": 15, "description": "15 du mois suivant le paiement des salaires" },
+    "is_declaration": { "frequence": "annuelle", "mois": 4, "jour": 30, "description": "30 avril de l'année suivante" },
+    "is_acompte_1": { "frequence": "annuelle", "mois": 5, "jour": 15, "description": "15 mai — 1/3 de l'IS estimé" },
+    "is_acompte_2": { "frequence": "annuelle", "mois": 8, "jour": 15, "description": "15 août — 1/3 de l'IS estimé" },
+    "is_acompte_3": { "frequence": "annuelle", "mois": 11, "jour": 15, "description": "15 novembre — 1/3 de l'IS estimé" },
+    "patente": { "frequence": "annuelle", "mois": 12, "jour": 31, "description": "31 décembre — 0,35% du CA N-1" },
+    "cnps": { "frequence": "mensuelle", "description": "Fin du mois courant" }
+  },
+  "seuils_syscohada": {
+    "systeme_normal_min_ca": 100000000,
+    "systeme_allege_min_ca": 30000000,
+    "systeme_minimal_tresorerie_max_ca": 30000000
+  },
+  "droits_enregistrement": {
+    "cession_fonds_commerce": 0.05,
+    "apport_en_societe": 0.03,
+    "mutation_immobiliere": 0.10
+  }
+}
