@@ -1,0 +1,27 @@
+{
+  "name": "wach-ohada",
+  "version": "1.0.0",
+  "description": "Skills IA pour la comptabilité SYSCOHADA et la fiscalité des pays OHADA",
+  "skills": [
+    {
+      "id": "comptable-chad",
+      "name": "Comptable SYSCOHADA — Tchad",
+      "description": "Expert-comptable IA spécialisé en comptabilité SYSCOHADA et fiscalité tchadienne (DGI, IS 35%, TVA 18%, IRPP, CNPS)",
+      "file": "comptable/SKILL.md",
+      "tags": ["comptabilité", "fiscalité", "ohada", "syscohada", "tchad", "cemac", "dgi"],
+      "country": "TD",
+      "zone": "CEMAC",
+      "referentiel": "SYSCOHADA-2017",
+      "pricing": "free",
+      "author": "wach",
+      "license": "MIT"
+    }
+  ],
+  "author": {
+    "name": "wach",
+    "email": "wachouniste1@gmail.com",
+    "github": "wach"
+  },
+  "repository": "https://github.com/wach/wach-ohada",
+  "license": "MIT"
+}
