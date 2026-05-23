@@ -1,0 +1,29 @@
+{
+  "_comment": "Copiez ce fichier en company.json et remplissez vos informations",
+  "name": "Société de Commerce Général SARL",
+  "forme_juridique": "SARL",
+  "rccm": "RCCM/NDB/2024/B/1234",
+  "nif": "123456789",
+  "regime_fiscal": "reel_normal",
+  "secteur": "commerce_general",
+  "capital_social": 1000000,
+  "exercice": {
+    "debut": "01/01",
+    "fin": "31/12"
+  },
+  "siege": {
+    "adresse": "Avenue Charles de Gaulle, Quartier Moursal",
+    "ville": "N'Djamena",
+    "pays": "Tchad"
+  },
+  "monnaie": "XAF",
+  "cnps_numero": "TC-12345",
+  "effectif": 10,
+  "ca_annuel_precedent": 50000000,
+  "systeme_comptable": "allege",
+  "banque_principale": "CBMT",
+  "contact": {
+    "telephone": "+235 66 00 00 00",
+    "email": "contact@monentreprise.td"
+  }
+}
