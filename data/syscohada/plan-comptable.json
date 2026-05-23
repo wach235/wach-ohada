@@ -1,0 +1,159 @@
+{
+  "version": "SYSCOHADA-2017",
+  "acte_uniforme": "26 janvier 2017",
+  "classes": [
+    {
+      "numero": 1,
+      "nom": "Comptes de ressources durables",
+      "description": "Capitaux propres, dettes financières et ressources assimilées",
+      "comptes": [
+        { "numero": "101", "nom": "Capital social" },
+        { "numero": "111", "nom": "Réserve légale" },
+        { "numero": "118", "nom": "Autres réserves" },
+        { "numero": "129", "nom": "Report à nouveau (solde débiteur)" },
+        { "numero": "131", "nom": "Résultat net : bénéfice" },
+        { "numero": "139", "nom": "Résultat net : perte" },
+        { "numero": "161", "nom": "Emprunts auprès des établissements de crédit" },
+        { "numero": "162", "nom": "Emprunts obligataires" },
+        { "numero": "181", "nom": "Dettes de location-acquisition" }
+      ]
+    },
+    {
+      "numero": 2,
+      "nom": "Comptes d'actif immobilisé",
+      "description": "Immobilisations incorporelles, corporelles et financières",
+      "comptes": [
+        { "numero": "211", "nom": "Terrains" },
+        { "numero": "221", "nom": "Bâtiments" },
+        { "numero": "231", "nom": "Matériel et outillage industriel" },
+        { "numero": "232", "nom": "Matériel et outillage agricole" },
+        { "numero": "241", "nom": "Matériel de transport" },
+        { "numero": "244", "nom": "Matériel informatique" },
+        { "numero": "251", "nom": "Avances et acomptes versés sur immobilisations" },
+        { "numero": "261", "nom": "Titres de participation" },
+        { "numero": "281", "nom": "Amortissements des immobilisations corporelles" },
+        { "numero": "291", "nom": "Dépréciations des immobilisations incorporelles" }
+      ]
+    },
+    {
+      "numero": 3,
+      "nom": "Comptes de stocks",
+      "description": "Marchandises, matières, produits et en-cours",
+      "comptes": [
+        { "numero": "31", "nom": "Marchandises" },
+        { "numero": "32", "nom": "Matières premières et fournitures liées" },
+        { "numero": "33", "nom": "Autres approvisionnements" },
+        { "numero": "34", "nom": "Produits en cours" },
+        { "numero": "35", "nom": "Produits finis" },
+        { "numero": "36", "nom": "Produits intermédiaires et résiduels" },
+        { "numero": "39", "nom": "Dépréciations des stocks" }
+      ]
+    },
+    {
+      "numero": 4,
+      "nom": "Comptes de tiers",
+      "description": "Fournisseurs, clients, État, personnel et autres tiers",
+      "comptes": [
+        { "numero": "401", "nom": "Fournisseurs" },
+        { "numero": "402", "nom": "Fournisseurs — effets à payer" },
+        { "numero": "408", "nom": "Fournisseurs — factures non parvenues" },
+        { "numero": "409", "nom": "Fournisseurs — avances et acomptes versés" },
+        { "numero": "411", "nom": "Clients" },
+        { "numero": "412", "nom": "Clients — effets à recevoir" },
+        { "numero": "418", "nom": "Clients — produits non encore facturés" },
+        { "numero": "419", "nom": "Clients — avances et acomptes reçus" },
+        { "numero": "421", "nom": "Personnel — avances et acomptes" },
+        { "numero": "422", "nom": "Personnel — rémunérations dues" },
+        { "numero": "431", "nom": "CNPS" },
+        { "numero": "441", "nom": "État — impôts et taxes" },
+        { "numero": "4431", "nom": "État — TVA collectée" },
+        { "numero": "4432", "nom": "État — TVA sur importations" },
+        { "numero": "4433", "nom": "État — TVA déductible sur achats" },
+        { "numero": "4441", "nom": "État — impôt sur les sociétés (IS)" },
+        { "numero": "4444", "nom": "État — IRPP" },
+        { "numero": "4445", "nom": "État — patente" },
+        { "numero": "4449", "nom": "État — autres impôts et taxes" },
+        { "numero": "461", "nom": "Débiteurs divers" },
+        { "numero": "481", "nom": "Créditeurs divers" }
+      ]
+    },
+    {
+      "numero": 5,
+      "nom": "Comptes de trésorerie",
+      "description": "Banques, caisses et valeurs en caisse",
+      "comptes": [
+        { "numero": "511", "nom": "Valeurs à l'encaissement" },
+        { "numero": "521", "nom": "Banques — comptes courants" },
+        { "numero": "531", "nom": "Chèques postaux" },
+        { "numero": "571", "nom": "Caisse" },
+        { "numero": "581", "nom": "Virements internes" }
+      ]
+    },
+    {
+      "numero": 6,
+      "nom": "Comptes de charges",
+      "description": "Charges d'exploitation, financières et hors activités ordinaires",
+      "comptes": [
+        { "numero": "601", "nom": "Achats de marchandises" },
+        { "numero": "602", "nom": "Achats de matières premières" },
+        { "numero": "604", "nom": "Achats de fournitures d'entretien" },
+        { "numero": "605", "nom": "Achats de fournitures de bureau" },
+        { "numero": "611", "nom": "Transports sur achats" },
+        { "numero": "612", "nom": "Transports sur ventes" },
+        { "numero": "621", "nom": "Personnels extérieurs à l'entreprise" },
+        { "numero": "622", "nom": "Honoraires" },
+        { "numero": "623", "nom": "Publicité, publications, relations publiques" },
+        { "numero": "624", "nom": "Loyers et charges locatives" },
+        { "numero": "625", "nom": "Entretien, réparations et maintenance" },
+        { "numero": "626", "nom": "Primes d'assurances" },
+        { "numero": "628", "nom": "Frais de télécommunications" },
+        { "numero": "631", "nom": "Frais bancaires" },
+        { "numero": "641", "nom": "Rémunérations du personnel" },
+        { "numero": "642", "nom": "Indemnités et avantages divers" },
+        { "numero": "643", "nom": "Charges sociales patronales (CNPS 16,5%)" },
+        { "numero": "644", "nom": "Taxe sur les salaires employeur (7,5%)" },
+        { "numero": "661", "nom": "Intérêts des emprunts" },
+        { "numero": "671", "nom": "Pertes de change" },
+        { "numero": "681", "nom": "Dotations aux amortissements des immobilisations" },
+        { "numero": "691", "nom": "Impôt sur les bénéfices (IS 35%)" }
+      ]
+    },
+    {
+      "numero": 7,
+      "nom": "Comptes de produits",
+      "description": "Produits d'exploitation, financiers et hors activités ordinaires",
+      "comptes": [
+        { "numero": "701", "nom": "Ventes de marchandises" },
+        { "numero": "702", "nom": "Ventes de produits finis" },
+        { "numero": "705", "nom": "Travaux facturés" },
+        { "numero": "706", "nom": "Services vendus" },
+        { "numero": "707", "nom": "Produits accessoires" },
+        { "numero": "721", "nom": "Production immobilisée" },
+        { "numero": "731", "nom": "Subventions d'exploitation" },
+        { "numero": "771", "nom": "Intérêts et produits financiers" },
+        { "numero": "772", "nom": "Gains de change" },
+        { "numero": "781", "nom": "Reprises de provisions" }
+      ]
+    },
+    {
+      "numero": 8,
+      "nom": "Comptes de résultat",
+      "description": "Résultat net de l'exercice",
+      "comptes": [
+        { "numero": "801", "nom": "Résultat net : bénéfice" },
+        { "numero": "802", "nom": "Résultat net : perte" }
+      ]
+    },
+    {
+      "numero": 9,
+      "nom": "Comptabilité analytique",
+      "description": "Comptes de gestion interne — centres de coûts, projets",
+      "comptes": [
+        { "numero": "901", "nom": "Comptes de réflexion" },
+        { "numero": "902", "nom": "Comptes de charges par nature" },
+        { "numero": "903", "nom": "Comptes de coûts" },
+        { "numero": "909", "nom": "Différences d'inventaire" }
+      ]
+    }
+  ]
+}
