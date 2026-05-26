@@ -32,7 +32,13 @@ function mdToHtml(md) {
       if (isFirstRow) isFirstRow = false;
     } else {
       if (inTable) { result.push('</table>'); inTable = false; isFirstRow = true; }
-      result.push(line ? `<p>${line}</p>` : '');
+      if (!line) {
+        result.push('');
+      } else if (/^<(h[1-6]|hr|blockquote|p|div|ul|ol|li)[ >\/]/.test(line)) {
+        result.push(line);
+      } else {
+        result.push(`<p>${line}</p>`);
+      }
     }
   }
   if (inTable) result.push('</table>');

@@ -70,12 +70,15 @@ function generateBilan(journal, periode) {
   const tresorerie  = sumDebit(soldes,  ['511','521','531','571']);
   const totalActif  = immoNet + stocks + clients + etatDeb + autresDeb + tresorerie;
 
+  // Résultat de l'exercice calculé dynamiquement depuis les comptes 6 et 7
+  const chargesEx = sumDebit(soldes, ['601','602','604','605','611','612','621','622','623','624','625','626','628','631','641','642','643','644','661','671','681','691']);
+  const produitsEx = sumCredit(soldes, ['701','702','703','704','705','706','707','731','741','771','772','781']);
+  const resultatEx = produitsEx - chargesEx;
+
   const capital     = sumCredit(soldes, ['101']);
   const reserves    = sumCredit(soldes, ['111','118']);
-  const rnBen       = sumCredit(soldes, ['131']);
-  const rnPerte     = sumDebit(soldes,  ['139']);
   const report      = sumCredit(soldes, ['12']) - sumDebit(soldes, ['129']);
-  const cpropres    = capital + reserves + rnBen - rnPerte + report;
+  const cpropres    = capital + reserves + report + resultatEx;
   const dettesFin   = sumCredit(soldes, ['161','162','181']);
   const fournisseur = sumCredit(soldes, ['401','402','408']);
   const etatCred    = sumCredit(soldes, ['4431','4441','4444','4445','4449']);
@@ -111,7 +114,7 @@ function generateBilan(journal, periode) {
 | Capital social (101) | ${fmtXAF(capital)} |
 | Réserves (111, 118) | ${fmtXAF(reserves)} |
 | Report à nouveau | ${fmtXAF(report)} |
-| Résultat de l'exercice | ${fmtXAF(rnBen - rnPerte)} |
+| Résultat de l'exercice | ${fmtXAF(resultatEx)} |
 | **Capitaux propres** | **${fmtXAF(cpropres)}** |
 | Dettes financières (161, 162) | ${fmtXAF(dettesFin)} |
 | Fournisseurs (401-408) | ${fmtXAF(fournisseur)} |

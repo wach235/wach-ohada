@@ -153,6 +153,8 @@ Pour les détails opérationnels, consulte :
 
 Le journal comptable persistant est stocké dans `data/journal.json`. Il contient toutes les écritures de l'exercice.
 
+> **Format des erreurs :** `journal.js` retourne des erreurs JSON sur stderr (`{"status":"error","message":"..."}`). Les autres scripts (`etats.js`, `pdf.js`, `import-csv.js`) retournent du texte lisible sur stderr.
+
 ### Avant de répondre à toute question comptable
 Vérifie si `data/journal.json` existe. Si oui, lis son contenu pour connaître l'état comptable actuel de l'entreprise.
 
@@ -238,7 +240,7 @@ Indique à l'utilisateur le chemin du PDF généré.
 ### Avant toute génération d'état
 Vérifier les écritures incomplètes :
 ```bash
-node scripts/journal.js list | python3 -c "import json,sys; e=[x for x in json.load(sys.stdin) if not x['equilibre']]; print(f'⚠️ {len(e)} écriture(s) incomplète(s)') if e else print('✅ Toutes les écritures sont équilibrées')"
+node scripts/journal.js list | node -e "let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{const e=JSON.parse(d).filter(x=>!x.equilibre);console.log(e.length?'⚠️  '+e.length+' écriture(s) incomplète(s)':'✅ Toutes les écritures sont équilibrées')})"
 ```
 
 ---
