@@ -149,6 +149,100 @@ Pour les détails opérationnels, consulte :
 
 ---
 
+## Journal Comptable
+
+Le journal comptable persistant est stocké dans `data/journal.json`. Il contient toutes les écritures de l'exercice.
+
+### Avant de répondre à toute question comptable
+Vérifie si `data/journal.json` existe. Si oui, lis son contenu pour connaître l'état comptable actuel de l'entreprise.
+
+### Après chaque écriture validée
+Dès qu'une écriture est confirmée par l'utilisateur, enregistre-la immédiatement :
+
+```bash
+node scripts/journal.js add '<json_ecriture>'
+```
+
+Le JSON à passer doit respecter ce format :
+```json
+{
+  "date": "YYYY-MM-DD",
+  "libelle": "Description de l'opération",
+  "piece": "Référence pièce justificative",
+  "type": "vente|achat|salaire|tresorerie|immobilisation|fiscalite|divers",
+  "lignes": [
+    { "compte": "521", "libelle": "Banques", "debit": 500000, "credit": 0 },
+    { "compte": "701", "libelle": "Ventes", "debit": 0, "credit": 500000 }
+  ]
+}
+```
+
+Après `add`, confirme à l'utilisateur : **ID de l'écriture** + solde du compte principal concerné.
+
+### Pour corriger une erreur
+```bash
+node scripts/journal.js delete <ID>
+```
+Puis re-saisir l'écriture corrigée.
+
+### Pour consulter les écritures
+```bash
+node scripts/journal.js list                        # toutes
+node scripts/journal.js list --from 2026-05-01 --to 2026-05-31  # par période
+node scripts/journal.js list --type vente           # par type
+node scripts/journal.js list --compte 411           # par compte
+```
+
+### Import de relevé bancaire
+```bash
+node scripts/import-csv.js releve-mai.csv
+```
+Les écritures importées ont `equilibre: false` et un compte `"?????"` à compléter. Demande à l'utilisateur le contre-compte pour chaque ligne, puis mets à jour via delete + add.
+
+### Avertissement écritures incomplètes
+Si des écritures `equilibre: false` existent dans le journal, signale-le avant de générer des états financiers.
+
+---
+
+## Génération des États Financiers
+
+### Sur demande de bilan ou compte de résultat
+
+Exécuter selon la demande :
+
+```bash
+# Bilan annuel
+node scripts/etats.js bilan 2026
+
+# Bilan d'une période
+node scripts/etats.js bilan 2026-05
+
+# Compte de résultat
+node scripts/etats.js resultat 2026-05
+
+# TAFIRE annuel
+node scripts/etats.js tafire 2026
+```
+
+Le Markdown généré est affiché directement dans la conversation. Les fichiers sont aussi sauvegardés dans `data/etats/`.
+
+### Sur demande d'export PDF
+
+```bash
+node scripts/pdf.js data/etats/bilan-2026-05.md
+# → data/etats/bilan-2026-05.pdf
+```
+
+Indique à l'utilisateur le chemin du PDF généré.
+
+### Avant toute génération d'état
+Vérifier les écritures incomplètes :
+```bash
+node scripts/journal.js list | python3 -c "import json,sys; e=[x for x in json.load(sys.stdin) if not x['equilibre']]; print(f'⚠️ {len(e)} écriture(s) incomplète(s)') if e else print('✅ Toutes les écritures sont équilibrées')"
+```
+
+---
+
 ## États Financiers Annuels
 
 Selon le CA de l'entreprise (champ `ca_annuel_precedent` dans `company.json`) :
