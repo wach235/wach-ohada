@@ -1,6 +1,6 @@
 {
   "name": "wach-ohada",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Skills IA pour la comptabilité SYSCOHADA et la fiscalité OHADA — Tchad et zone CEMAC",
   "keywords": ["ohada", "syscohada", "comptabilité", "fiscalité", "tchad", "cemac", "ai-skill"],
   "author": "wach",
@@ -11,7 +11,14 @@
     "url": "https://github.com/wach235/wach-ohada.git"
   },
   "scripts": {
-    "validate": "for f in comptable/profiles/chad.json data/syscohada/plan-comptable.json comptable/company.example.json marketplace.json; do python3 -m json.tool $f > /dev/null && echo OK: $f || echo FAIL: $f; done",
-    "test": "npm run validate"
+    "journal": "node scripts/journal.js",
+    "import": "node scripts/import-csv.js",
+    "etats": "node scripts/etats.js",
+    "pdf": "node scripts/pdf.js",
+    "validate": "for f in comptable/profiles/chad.json data/syscohada/plan-comptable.json comptable/company.example.json marketplace.json data/journal.json; do python3 -m json.tool $f > /dev/null && echo OK: $f || echo FAIL: $f; done",
+    "test": "node scripts/test-journal.js"
+  },
+  "dependencies": {
+    "puppeteer": "^22.0.0"
   }
 }
