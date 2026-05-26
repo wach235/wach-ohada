@@ -3,3 +3,5 @@ node_modules/
 *.local
 .DS_Store
 company.json
+data/etats/*.md
+data/etats/*.pdf
